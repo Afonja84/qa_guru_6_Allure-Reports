@@ -12,7 +12,6 @@ allure {
     aspectjVersion = '1.9.4'
     aspectjweaver = true
     autoconfigure = true
-    resultsDir = file("$projectDir/build/allure-results")
     configurations {
         testCompile {
             extendsFrom testImplementation
@@ -46,6 +45,5 @@ dependencies {
 
 test {
     useJUnitPlatform {}
-    systemProperty 'allure.results.directory', "$projectDir/build/allure-results"
 }
 

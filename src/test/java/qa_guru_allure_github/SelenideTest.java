@@ -1,4 +1,4 @@
-package qa_guru_allure;
+package qa_guru_allure_github;
 
 import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.Test;
@@ -18,12 +18,12 @@ public class SelenideTest {
         open("https://github.com");
 
         $(".header-search-input").click();
-        $(".header-search-input").sendKeys("eroshenkoam/allure-example");
+        $(".header-search-input").sendKeys("Afonja84/qa_guru_6_Allure_Reports");
         $(".header-search-input").submit();
 
-        $(linkText("eroshenkoam/allure-example")).click();
+        $(linkText("Afonja84/qa_guru_6_Allure_Reports")).click();
         $(partialLinkText("Issues")).click();
-        $(byText("#68")).should(Condition.exist);
+        $(byText("Issues")).should(Condition.exist);
     }
 
 }

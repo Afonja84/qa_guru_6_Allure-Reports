@@ -15,22 +15,19 @@ allure {
     aspectjVersion = '1.9.4'
     aspectjweaver = true
     autoconfigure = true
-    configurations {
-        testCompile {
-            extendsFrom testImplementation
-        }
-    }
+//    configurations {
+//        testCompile {
+//            extendsFrom testImplementation
+//        }
+//    }
+    configuration = "testImplementation"
     useJUnit5 {
         version = '2.14.0'
     }
 }
 
 compileTestJava {
-    options.encoding = 'UTF-8'
-}
-
-sourceCompatibility = 11
-targetCompatibility = 11
+    options.encoding = 'UTF-8'}
 
 dependencies {
     testImplementation(
@@ -41,7 +38,6 @@ dependencies {
     )
 
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.2")
-
 }
 
 test {

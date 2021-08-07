@@ -1,6 +1,8 @@
 package qa_guru_allure_github;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selectors.byText;
@@ -13,7 +15,8 @@ public class SelenideTest {
 
     @Test
     public void repositoryIssueTest() {
-        //SelenideLogger.addListener("allure", new AllureSelenide());
+
+        SelenideLogger.addListener("allure", new AllureSelenide());  //отчёт в Аллюр
 
         open("https://github.com");
 
